@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/LRAbbade/Blockchain-Visualizer#readme",
   "dependencies": {
-    "blockchain.info": "^2.12.1"
+    "blockchain.info": "^2.12.1",
+    "lodash": "^4.17.10"
   }
 }
