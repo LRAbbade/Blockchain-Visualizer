@@ -1,0 +1,26 @@
+{
+  "name": "blockchain-visualizer",
+  "version": "1.0.0",
+  "description": "A blockchain visualizing web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LRAbbade/Blockchain-Visualizer.git"
+  },
+  "keywords": [
+    "blockchain",
+    "visualization"
+  ],
+  "author": "Lucas Abbade",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LRAbbade/Blockchain-Visualizer/issues"
+  },
+  "homepage": "https://github.com/LRAbbade/Blockchain-Visualizer#readme",
+  "dependencies": {
+    "blockchain.info": "^2.12.1"
+  }
+}
