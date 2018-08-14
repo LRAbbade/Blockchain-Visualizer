@@ -14,7 +14,7 @@
     "blockchain",
     "visualization"
   ],
-  "author": "Lucas Abbade",
+  "author": "Lucas Abbade, Felipe Martins",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/LRAbbade/Blockchain-Visualizer/issues"
@@ -22,6 +22,13 @@
   "homepage": "https://github.com/LRAbbade/Blockchain-Visualizer#readme",
   "dependencies": {
     "blockchain.info": "^2.12.1",
-    "lodash": "^4.17.10"
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "lodash": "^4.17.10",
+    "async": "^2.6.0",
+    "body-parser": "^1.18.2",
+    "consign": "^0.1.6",
+    "cors": "^2.8.4"
   }
 }
