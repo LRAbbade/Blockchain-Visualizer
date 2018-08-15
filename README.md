@@ -8,7 +8,9 @@ Searches made in the platform will be stored in a MongoDB for further analysis.
 ### Architecture
 
 Frontend is made using [ejs](http://ejs.co/) and [bootstrap](https://getbootstrap.com/).
+
 Backend in [node.js](https://nodejs.org/en/) and [express](https://expressjs.com/).
+
 Database is [MongoDB](https://www.mongodb.com/).
 
 ---
