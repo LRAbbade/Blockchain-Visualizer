@@ -19,11 +19,6 @@ nav {
     height: 100%;
 }
 
-.block {
-    height: 100%;
-    border: 2px solid violet;
-}
-
 footer {
     position: fixed;
     /* height: 60px; */
@@ -31,4 +26,35 @@ footer {
     width: 100%;
     background-color: #343a40;
     padding: 20px;
+}
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 548px;
+  padding: 0 50px;
+}
+
+.scrolling-wrapper .block {
+  display: inline-block;
+}
+
+.block {
+    width: 300px;
+    height: 432px;
+    border: 5px solid rgba(127, 127, 127, 0.8);
+    border-radius: 25px;
+    margin: 30px;
+    padding: 15px;
+    white-space: normal!important;
+    overflow-x:scroll!important;
+}
+
+.block p strong {
+    font-size: 20px;
+}
+
+.break {
+    word-break: break-all;
 }
