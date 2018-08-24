@@ -1,3 +1,10 @@
+body {
+    background-image: url("/images/chain_bg.png");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
 nav {
     box-shadow: 0 2px 5px 0px;
     margin-bottom: 20px;
@@ -49,6 +56,7 @@ footer {
     padding: 15px;
     white-space: normal!important;
     overflow-x:scroll!important;
+    background-color: white;
 }
 
 .block p strong {
