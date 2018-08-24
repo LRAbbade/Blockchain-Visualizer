@@ -22,14 +22,15 @@
   },
   "homepage": "https://github.com/LRAbbade/Blockchain-Visualizer#readme",
   "dependencies": {
+    "async": "^2.6.0",
     "blockchain.info": "^2.12.1",
+    "body-parser": "^1.18.2",
+    "consign": "^0.1.6",
+    "cors": "^2.8.4",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
     "lodash": "^4.17.10",
-    "async": "^2.6.0",
-    "body-parser": "^1.18.2",
-    "consign": "^0.1.6",
-    "cors": "^2.8.4"
+    "nodemon": "^1.18.3"
   }
 }
