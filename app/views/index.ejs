@@ -14,35 +14,17 @@
 
         <div class="scrolling-wrapper">
             
+            <% blocks.forEach((block) => { %>
             <div class="block">
-                <p class="break"><strong>Hash:</strong> <span class="lead"> 6496B46FEF6797201CCDE714D59DBE90ACD3077473F23D62B2AE1A86BDCBC2D3</span></p>
-                <p><strong>Data:</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, amet. Reiciendis ea, ut nam, sed perferendis harum nisi fuga asperiores ducimus eaque eius non odit tempora ex dolorem cupiditate blanditiis?</p>
+                <p class="break"><strong>Hash:</strong> <span class="lead"> <%= block.hash %></span></p>
+                <p><strong>Car Plate:</strong> <%= block.carPlate %></p>
+                <p><strong>Timestamp:</strong> <%= block.timestamp %></p>
+                <p><strong>Data:</strong> <%= block.carData.data %> metros</p>
+                <p><strong>Index:</strong> <span class="index"><%= block.index %></span></p>
+                <p class="break"><strong>Previous Block Hash:</strong> <span class="lead hash-small"> <%= block.previousBlockHash %></span></p>
             </div>
+            <% }); %>
 
-            <div class="block">
-                <p class="break"><strong>Hash:</strong> <span class="lead">6496B46FEF6797201CCDE714D59DBE90ACD3077473F23D62B2AE1A86BDCBC2D3</span></p>
-                <p><strong>Data:</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, amet. Reiciendis ea, ut nam, sed perferendis harum nisi fuga asperiores ducimus eaque eius non odit tempora ex dolorem cupiditate blanditiis?</p>
-            </div>
-            <div class="block">
-                <p class="break"><strong>Hash:</strong> <span class="lead">6496B46FEF6797201CCDE714D59DBE90ACD3077473F23D62B2AE1A86BDCBC2D3</span></p>
-                <p><strong>Data:</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, amet. Reiciendis ea, ut nam, sed perferendis harum nisi fuga asperiores ducimus eaque eius non odit tempora ex dolorem cupiditate blanditiis?</p>
-            </div>
-            <div class="block">
-                <p class="break"><strong>Hash:</strong> <span class="lead">6496B46FEF6797201CCDE714D59DBE90ACD3077473F23D62B2AE1A86BDCBC2D3</span></p>
-                <p><strong>Data:</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, amet. Reiciendis ea, ut nam, sed perferendis harum nisi fuga asperiores ducimus eaque eius non odit tempora ex dolorem cupiditate blanditiis?</p>
-            </div>
-            <div class="block">
-                <p class="break"><strong>Hash:</strong> <span class="lead">6496B46FEF6797201CCDE714D59DBE90ACD3077473F23D62B2AE1A86BDCBC2D3</span></p>
-                <p><strong>Data:</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, amet. Reiciendis ea, ut nam, sed perferendis harum nisi fuga asperiores ducimus eaque eius non odit tempora ex dolorem cupiditate blanditiis?</p>
-            </div>
-            <div class="block">
-                <p class="break"><strong>Hash:</strong> <span class="lead">6496B46FEF6797201CCDE714D59DBE90ACD3077473F23D62B2AE1A86BDCBC2D3</span></p>
-                <p><strong>Data:</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, amet. Reiciendis ea, ut nam, sed perferendis harum nisi fuga asperiores ducimus eaque eius non odit tempora ex dolorem cupiditate blanditiis?</p>
-            </div>
-            <div class="block">
-                <p class="break"><strong>Hash:</strong> <span class="lead">6496B46FEF6797201CCDE714D59DBE90ACD3077473F23D62B2AE1A86BDCBC2D3</span></p>
-                <p><strong>Data:</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, amet. Reiciendis ea, ut nam, sed perferendis harum nisi fuga asperiores ducimus eaque eius non odit tempora ex dolorem cupiditate blanditiis?</p>
-            </div>
         </div>
 
         <%- include partials/footer.ejs %>

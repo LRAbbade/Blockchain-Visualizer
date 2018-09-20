@@ -57,6 +57,7 @@ footer {
     white-space: normal!important;
     overflow-x:scroll!important;
     background-color: white;
+    font-size: 18px;
 }
 
 .block p strong {
@@ -65,4 +66,16 @@ footer {
 
 .break {
     word-break: break-all;
+}
+
+.lead {
+    font-size: 18px;
+}
+
+.index {
+    color: rgb(44, 44, 241);
+}
+
+.hash-small {
+    font-size: 14px;
 }
