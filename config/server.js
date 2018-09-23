@@ -11,7 +11,7 @@ app.use(express.static('./app/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 
 consign({ cwd: process.cwd() + "/app" })
-    .include('app/routes')
-    .then('app/controllers')
+    .include('/routes')
+    .then('/controllers')
     .into(app);
 module.exports = app;
