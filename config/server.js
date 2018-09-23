@@ -11,7 +11,6 @@ app.use(express.static('./app/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 
 consign({ cwd: process.cwd() + "/app" })
-consign()
     .include('app/routes')
     .then('app/controllers')
     .into(app);
