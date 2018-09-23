@@ -10,10 +10,8 @@ app.set('views', './app/views');
 app.use(express.static('./app/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 
-console.log(`process cwd: ${process.cwd()}`)
-
-consign({ cwd: process.cwd() + "/" })
-    .include('app/routes')
-    .then('app/controllers')
+consign({ cwd: process.cwd() })
+    .include('./app/routes')
+    .then('./app/controllers')
     .into(app);
 module.exports = app;
