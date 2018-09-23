@@ -10,7 +10,7 @@ app.set('views', './app/views');
 app.use(express.static('./app/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 
-consign({ cwd: process.cwd() })
+consign()
     .include('./app/routes')
     .then('./app/controllers')
     .into(app);
