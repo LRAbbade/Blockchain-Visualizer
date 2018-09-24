@@ -1,3 +1,4 @@
+const endpoint = '35.237.108.201'
 var mostRecentBtn = document.querySelector("#most-recent");
 var oldestBtn = document.querySelector("#oldest");
 var mostRecentActive;
@@ -34,5 +35,6 @@ function switchOrding() {
 
 function reload() {
     const ord = mostRecentActive ? "lastBlocks" : "blocks";
-    window.location.href = `http://localhost:5000/${ord}/${numOfBlocks}`;
+    // window.location.href = `http://localhost:5000/${ord}/${numOfBlocks}`;    // for testing
+    window.location.href = `http://${endpoint}:5000/${ord}/${numOfBlocks}`;
 }
