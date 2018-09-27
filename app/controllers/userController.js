@@ -1,15 +1,15 @@
 var User = require('../models/user');
 
-exports.save = function (body, callback) {
+exports.insert = function (body, callback) {
     new User({
         'user_agent': body.user_agent,
         'plataform': body.plataform,
         'plataform_details': body.plataform_details
-    }).save(function (error, user) {
+    }).save(function (error, User) {
         if (error) {
             callback({error: 'Cannot create user.'});
         } else {
-            callback(user);
+            callback(User);
         }
     });
 };
@@ -25,7 +25,7 @@ exports.getAll = function (callback) {
 };
 
 exports.delete = function (userId, callback) {
-    User.findById(id, function (error, user) {
+    User.findById(userId, function (error, user) {
         if (error) {
             callback({error: 'Cannot delete user.'})
         } else {
@@ -33,7 +33,7 @@ exports.delete = function (userId, callback) {
                 if (!error) {
                     callback({resposta: 'User deleted successfully.'})
                 }
-            })
+            });
         }
     })
 };
