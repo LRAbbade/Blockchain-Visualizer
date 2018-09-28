@@ -46,7 +46,9 @@ module.exports = function (application) {
     });
 
     application.post('/register-search', function (req, res) {
-
+        SearchesController.insert(req.body, function (resp) {
+            res.json(resp);
+        })
     });
 };
 
