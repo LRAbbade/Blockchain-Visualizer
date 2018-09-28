@@ -22,6 +22,14 @@ module.exports = function (application) {
         })
     });
 
+    application.put('/update/:id', function (req, res) {
+        var userId = req.params.id;
+
+        UserController.update(userId, req.body, function (resp) {
+            res.json(resp);
+        });
+    });
+
     application.delete('/remove/:id', function (req, res) {
         var userId = req.params.id;
 

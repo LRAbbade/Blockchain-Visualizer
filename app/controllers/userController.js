@@ -24,10 +24,21 @@ exports.getAll = function (callback) {
     });
 };
 
+exports.update = function (userId, body, callback) {
+    User.findOneAndUpdate(userId, body, function (error, user) {
+        if (error) {
+            callback({error: 'No user found with the specified id.'})
+
+        } else {
+            callback(user);
+        }
+    });
+};
+
 exports.delete = function (userId, callback) {
     User.findById(userId, function (error, user) {
         if (error) {
-            callback({error: 'Cannot delete user.'})
+            callback({error: 'No user found with the specified id.'})
         } else {
             user.remove(function (error) {
                 if (!error) {
