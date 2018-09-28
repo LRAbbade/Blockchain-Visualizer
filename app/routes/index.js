@@ -1,6 +1,5 @@
-const User = require('../models/user');
-//const Searches = require('../models/searches');
 const UserController = require('../controllers/userController');
+const SearchesController = require('../controllers/searchesController');
 
 module.exports = function (application) {
 
@@ -8,6 +7,7 @@ module.exports = function (application) {
         res.send('Blockchain Visualizer');
     });
 
+    //Users route
     application.get('/users', function (req, res) {
 
         UserController.getAll(function (resp) {
@@ -38,6 +38,13 @@ module.exports = function (application) {
         })
     });
 
+
+    //Searches route
+    application.get('/searches', function (req, res) {
+        SearchesController.getAll(function (resp) {
+            res.json(resp);
+        })
+    });
 };
 
 // module.exports = function (application) {
