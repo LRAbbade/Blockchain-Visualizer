@@ -17,7 +17,7 @@ exports.insert = function (body, callback) {
 exports.getAll = function (callback) {
     User.find({}, function (error, User) {
         if (error) {
-            callback({error: 'No Users Found.'});
+            callback({error: '0 Users Found.'});
         } else {
             callback(User);
         }
@@ -27,7 +27,7 @@ exports.getAll = function (callback) {
 exports.update = function (userId, body, callback) {
     User.findOneAndUpdate(userId, body, function (error, user) {
         if (error) {
-            callback({error: 'No user found with the specified id.'})
+            callback({error: '0 users found with the specified id.'})
 
         } else {
             callback(user);

@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="508fbed1-80e9-40f9-b5ee-b54041af0692" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/controllers/searchesController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/searches.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/searches.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -10,21 +13,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DockManager">
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/docs/db_schema.png">
-                <provider selected="true" editor-type-id="images" />
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1756336741">
@@ -39,7 +27,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="ejs" value="2" />
-          <entry key="js" value="51" />
+          <entry key="js" value="58" />
           <entry key="json" value="1" />
           <entry key="png" value="6" />
         </counts>
@@ -49,18 +37,18 @@
           <entry key="EJS" value="1" />
           <entry key="Image" value="6" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="51" />
+          <entry key="JavaScript" value="58" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="3750" />
+          <entry key="js" value="4881" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="3750" />
+          <entry key="JavaScript" value="4881" />
         </counts>
       </usages-collector>
     </session>
@@ -70,8 +58,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+            <state>
+              <folding>
+                <element signature="e#244#294#0" />
+                <element signature="e#502#607#0" />
+                <element signature="e#561#600#0" />
+                <element signature="e#662#678#0" />
+                <element signature="e#764#788#0" />
+                <element signature="e#669#808#0" />
+                <element signature="e#762#801#0" />
+                <element signature="e#1258#1303#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,32 +82,29 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/searchesController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="45" selection-start-column="45" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/userController.js">
+        <entry file="file://$PROJECT_DIR$/app/models/searches.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
-              <folding>
-                <element signature="e#82#403#0" />
-                <element signature="e#97#232#0" />
-                <element signature="e#262#399#0" />
-                <element signature="e#283#348#0" />
-                <element signature="e#354#393#0" />
-                <element signature="e#443#623#0" />
-                <element signature="e#486#619#0" />
-                <element signature="e#507#568#0" />
-                <element signature="e#574#613#0" />
-                <element signature="e#665#673#0" />
-                <element signature="e#718#734#0" />
-                <element signature="e#737#761#0" />
-                <element signature="e#822#846#0" />
-                <element signature="e#671#1006#0" />
-                <element signature="e#718#1003#0" />
-                <element signature="e#739#803#0" />
-                <element signature="e#809#997#0" />
-                <element signature="e#852#986#0" />
-                <element signature="e#882#972#0" />
-              </folding>
+              <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="17" column="33" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -133,13 +127,14 @@
         <option value="$PROJECT_DIR$/app/model/userInfo.js" />
         <option value="$PROJECT_DIR$/app/controllers/index.js" />
         <option value="$PROJECT_DIR$/app/model/searches.js" />
-        <option value="$PROJECT_DIR$/app/models/searches.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/app/database/index.js" />
         <option value="$PROJECT_DIR$/app/models/user.js" />
         <option value="$PROJECT_DIR$/config/server.js" />
-        <option value="$PROJECT_DIR$/app/routes/index.js" />
         <option value="$PROJECT_DIR$/app/controllers/userController.js" />
+        <option value="$PROJECT_DIR$/app/controllers/searchesController.js" />
+        <option value="$PROJECT_DIR$/app/routes/index.js" />
+        <option value="$PROJECT_DIR$/app/models/searches.js" />
       </list>
     </option>
   </component>
@@ -160,9 +155,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-3" />
-    <option name="width" value="1372" />
-    <option name="height" value="738" />
+    <option name="width" value="683" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -217,12 +211,18 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="searches&#9;FILE&#9;file:///home/felipe/git/Blockchain-Visualizer/app/models/searches.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app.js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/models" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -255,24 +255,24 @@
       <option name="presentableId" value="Default" />
       <updated>1537843745660</updated>
       <workItem from="1537843746955" duration="1202000" />
-      <workItem from="1537844976889" duration="22050000" />
+      <workItem from="1537844976889" duration="24340000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23252000" />
+    <option name="totallyTimeSpent" value="25542000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1372" height="738" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4975728" visible="true" weight="0.25530303" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4975728" visible="true" weight="0.14696969" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.50242716" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32736155" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5863192" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.41856676" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -328,13 +328,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/searches.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -356,13 +349,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -379,13 +365,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/block_explorer.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/db_schema.png">
       <provider selected="true" editor-type-id="images" />
@@ -404,38 +383,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+        <state>
+          <folding>
+            <element signature="e#244#294#0" />
+            <element signature="e#502#607#0" />
+            <element signature="e#561#600#0" />
+            <element signature="e#662#678#0" />
+            <element signature="e#764#788#0" />
+            <element signature="e#669#808#0" />
+            <element signature="e#762#801#0" />
+            <element signature="e#1258#1303#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/userController.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/searchesController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="45" selection-start-column="45" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/searches.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
-          <folding>
-            <element signature="e#82#403#0" />
-            <element signature="e#97#232#0" />
-            <element signature="e#262#399#0" />
-            <element signature="e#283#348#0" />
-            <element signature="e#354#393#0" />
-            <element signature="e#443#623#0" />
-            <element signature="e#486#619#0" />
-            <element signature="e#507#568#0" />
-            <element signature="e#574#613#0" />
-            <element signature="e#665#673#0" />
-            <element signature="e#718#734#0" />
-            <element signature="e#737#761#0" />
-            <element signature="e#822#846#0" />
-            <element signature="e#671#1006#0" />
-            <element signature="e#718#1003#0" />
-            <element signature="e#739#803#0" />
-            <element signature="e#809#997#0" />
-            <element signature="e#852#986#0" />
-            <element signature="e#882#972#0" />
-          </folding>
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
         </state>
       </provider>
     </entry>

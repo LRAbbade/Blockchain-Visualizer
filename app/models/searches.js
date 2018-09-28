@@ -7,17 +7,17 @@ const SearchesSchema = new mongoose.Schema({
     },
     blockHash: {
         type: String,
-        require: true,
-    },
-    userInfo: {
-        type: mongoose.Schema.Types.objectId,
-        ref: 'UserInfo',
-        require: true,
+        require: true
     },
     result: {
         type: Boolean,
-        require: true,
-    }
+        require: true
+    },
+    userInfo: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        require: true
+    }]
 });
 
 const Searches = mongoose.model('Searches', SearchesSchema);
