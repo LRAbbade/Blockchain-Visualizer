@@ -48,7 +48,19 @@ module.exports = function (application) {
     application.post('/register-search', function (req, res) {
         SearchesController.insert(req.body, function (resp) {
             res.json(resp);
-        })
+        });
+    });
+
+    application.put('/update-search/:searchId', function (req, res) {
+        SearchesController.update(req.params.searchId, req.body, function (resp) {
+            res.json(resp);
+        });
+    });
+
+    application.delete('/remove-search/:searchId', function (req, res) {
+        SearchesController.delete(req.params.searchId, function (resp) {
+            res.json(resp);
+        });
     });
 };
 

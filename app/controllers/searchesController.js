@@ -38,7 +38,7 @@ exports.update = function (searchId, body, callback) {
 };
 
 exports.delete = function (userId, callback) {
-    Searches.findOneAndDelete(userId, body, function (error, search) {
+    Searches.findOneAndDelete(userId, function (error, search) {
         if (error) {
             callback({error: '0 searches found with the specified id.'});
         } else {
