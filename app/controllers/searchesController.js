@@ -2,7 +2,7 @@ var Searches = require('../models/searches');
 
 exports.insert = function (body, callback) {
     new Searches({
-        'timestamp': body.timestamp,
+        'timestamp': Date(),
         'blockHash': body.blockHash,
         'userInfo': body.userInfo,
         'result': body.result
