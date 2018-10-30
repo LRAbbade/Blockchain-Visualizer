@@ -23,10 +23,6 @@
   "homepage": "https://github.com/LRAbbade/Blockchain-Visualizer#readme",
   "dependencies": {
     "async": "^2.6.0",
-<<<<<<< HEAD
-=======
-    "blockchain.info": "^2.12.1",
->>>>>>> 0050e5a15d4ff89f213330d05434f73ed4200e67
     "body-parser": "^1.18.2",
     "consign": "^0.1.6",
     "cors": "^2.8.4",
@@ -34,16 +30,11 @@
     "express": "^4.16.3",
     "express-session": "^1.15.6",
     "lodash": "^4.17.10",
-<<<<<<< HEAD
-    "nodemon": "^1.18.3",
-    "request": "^2.88.0"
-=======
     "mongodb": "^3.1.6",
     "mongoose": "^5.2.17",
     "request": "^2.88.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.4"
->>>>>>> 0050e5a15d4ff89f213330d05434f73ed4200e67
   }
 }
