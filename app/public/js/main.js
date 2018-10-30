@@ -35,6 +35,6 @@ function switchOrding() {
 
 function reload() {
     const ord = mostRecentActive ? "lastBlocks" : "blocks";
-    // window.location.href = `http://localhost:5000/${ord}/${numOfBlocks}`;    // for testing
-    window.location.href = `http://${endpoint}:5000/${ord}/${numOfBlocks}`;
+    window.location.href = `http://localhost:5000/${ord}/${numOfBlocks}`;    // for testing
+    // window.location.href = `http://${endpoint}:5000/${ord}/${numOfBlocks}`;
 }

@@ -1,15 +1,23 @@
 module.exports = function (application) {
-    application.get('/', function (req, res) {
-        application.app.controllers.index.renderIndex(application, req, res, "lastBlocks", "20");
+    function renderIndex(req, res, route, blocks) {
+        application.app.controllers.index.renderIndex(application, req, res, route, blocks);
+    }
+
+    application.get('/', (req, res) => {
+        renderIndex(req, res, "lastBlocks", "20");
     });
 
     application.get('/lastBlocks/:amount', (req, res) => {
         const numBlocks = req.params.amount;
-        application.app.controllers.index.renderIndex(application, req, res, "lastBlocks", numBlocks);
+        renderIndex(req, res, "lastBlocks", numBlocks);
     });
 
     application.get('/blocks/:amount', (req, res) => {
         const numBlocks = req.params.amount;
-        application.app.controllers.index.renderIndex(application, req, res, "blocks", numBlocks);
+        renderIndex(req, res, "blocks", numBlocks);
+    });
+
+    application.get('/statistics', (req, res) => {
+        application.app.controllers.index.renderStatistics(application, req, res);
     });
 };

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Blockchain Visualizer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/statsStyle.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/icon.png" />
+</head>
+
+<body>
+
+    <%- include partials/navbar.ejs %>
+
+    <div class="container">
+        <h1 class="page-title">Statistics</h1>
+    </div>
+
+    <div class="container">
+        <h3>Number of requests over time:</h3>
+        <div id="reqTimeSeries"></div>
+    </div>
+
+    <div class="container">
+        <h3>User Request Information:</h3>
+        <div id="platformDetails"></div>
+    </div>
+
+    <p class="footer-note text-center">This data specifies the common hardware/software used to access this site, as well as the number of requests over time.</p>
+
+    <%- include partials/footer.ejs %>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <script src="/js/statisticsMain.js"></script>
+
+</body>
+
+</html>

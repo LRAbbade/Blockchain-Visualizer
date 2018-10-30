@@ -1,0 +1,26 @@
+body {
+    background-image: none;
+}
+
+.page-title {
+    background-color: rgba(230, 230, 230, 0.5);
+    border: 3px solid rgba(127, 127, 127, 0.8);
+    border-radius: 15px;
+    margin: 25px;
+    padding: 10px 20px;
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+#reqTimeSeries {
+    width: 90%;
+    height: 400px;
+}
+
+.footer-note {
+    font-size: 16px;
+    margin: 100px;
+}
