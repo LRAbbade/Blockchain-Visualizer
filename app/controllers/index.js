@@ -1,5 +1,4 @@
 const request = require('request');
-<<<<<<< HEAD
 // const endpoint = 'http://localhost:6653';
 const endpoint = 'http://35.237.108.201:6653'
 
@@ -33,12 +32,6 @@ function insertStatisticsInMongo(reqDetails) {
 module.exports.renderIndex = function (application, req, res, order, numBlocks) {
     insertStatisticsInMongo(getReqDetails(req));
 
-=======
-const endpoint = 'http://localhost:6653';
-// const endpoint = 'http://35.237.108.201:6653'
-
-/*module.exports.renderIndex = function (application, req, res, order, numBlocks) {
->>>>>>> 0050e5a15d4ff89f213330d05434f73ed4200e67
     request(`${endpoint}/${order}/${numBlocks}`, (err, resp, body) => {
         body = JSON.parse(body);
         res.render("index", {
@@ -47,14 +40,9 @@ const endpoint = 'http://localhost:6653';
             numBlocks: numBlocks
         });
     });
-<<<<<<< HEAD
 };
 
 module.exports.renderStatistics = function (application, req, res) {
     insertStatisticsInMongo(getReqDetails(req));
     res.render("statistics");
 };
-=======
-};*/
-
->>>>>>> 0050e5a15d4ff89f213330d05434f73ed4200e67
