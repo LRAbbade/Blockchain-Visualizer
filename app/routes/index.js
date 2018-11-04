@@ -1,4 +1,4 @@
-const UserController = require('../controllers/userController');
+const UserController = require('../controllers/userInfoController');
 const SearchesController = require('../controllers/searchesController');
 
 module.exports = function (application) {
