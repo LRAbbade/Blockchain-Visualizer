@@ -1,16 +1,39 @@
-var User = require('../models/user');
+const User = require('../models/user');
+const bcrypy = require('bcrypt-nodejs');
 
 exports.insert = function (body, callback) {
-    new User({
-        'username': body.username,
-        'plataform': body.password,
-    }).save(function (error, User) {
-        if (error) {
-            callback({error: 'Cannot create user.'});
-        } else {
-            callback(User);
+    const username = body.username;
+    const password = body.password;
+    const confirmPassword = body.confirmPassword;
+
+    if (username && password && confirmPassword) {
+        if (password === confirmPassword) {
+            User.findOne({'username': username}, function (User) {
+                if (User) {
+                    callback({sucess: false, message: 'Username already in use'});
+                } else {
+                    bcrypy.hash(password, 10, null, function (err, hash) {
+                        if (err) {
+                            callback({sucess: false, error: err});
+                        } else {
+                            new User({
+                                'username': body.username,
+                                'password': hash,
+                            }).save(function (error, User) {
+                                if (error) {
+                                    callback({error: 'Cannot create user.'});
+                                } else {
+                                    callback(User);
+                                }
+                            });
+                        }
+                    });
+                }
+            });
         }
-    });
+    }
+
+
 };
 
 exports.getAll = function (callback) {
