@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const userInfo = new mongoose.Schema({
+const UserInfo = new mongoose.Schema({
     user_agent: {
         type: String,
         require: true,
@@ -15,4 +15,4 @@ const userInfo = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('UserInfo', userInfo);
+module.exports = mongoose.model('UserInfo', UserInfo);

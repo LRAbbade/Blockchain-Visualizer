@@ -1,4 +1,4 @@
-const UserController = require('../controllers/userInfoController');
+const UserInfoController = require('../controllers/userInfoController');
 const SearchesController = require('../controllers/searchesController');
 
 module.exports = function (application) {
@@ -31,14 +31,14 @@ module.exports = function (application) {
     //Users route
     application.get('/users', function (req, res) {
 
-        UserController.getAll(function (resp) {
+        UserInfoController.getAll(function (resp) {
             res.json(resp);
         });
     });
 
     application.post('/register-user', function (req, res) {
 
-        UserController.insert(req.body, function (resp) {
+        UserInfoController.insert(req.body, function (resp) {
             res.json(resp);
         })
     });
@@ -46,7 +46,7 @@ module.exports = function (application) {
     application.put('/update-user/:id', function (req, res) {
         var userId = req.params.id;
 
-        UserController.update(userId, req.body, function (resp) {
+        UserInfoController.update(userId, req.body, function (resp) {
             res.json(resp);
         });
     });
@@ -54,7 +54,7 @@ module.exports = function (application) {
     application.delete('/remove-user/:id', function (req, res) {
         var userId = req.params.id;
 
-        UserController.delete(userId, function (resp) {
+        UserInfoController.delete(userId, function (resp) {
             res.json(resp);
         })
     });

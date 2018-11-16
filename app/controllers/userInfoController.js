@@ -1,4 +1,4 @@
-var UserInfo = require('../models/userInfo');
+ var UserInfo = require('../models/userInfo');
 
 exports.insert = function (body, callback) {
     new UserInfo({
@@ -25,12 +25,12 @@ exports.getAll = function (callback) {
 };
 
 exports.update = function (userId, body, callback) {
-    UserInfo.findOneAndUpdate(userId, body, function (error, user) {
+    UserInfo.findOneAndUpdate(userId, body, function (error, userInfo) {
         if (error) {
             callback({error: 'No user information found with the specified id.'})
 
         } else {
-            callback(user);
+            callback(userInfo);
         }
     });
 };
