@@ -1,0 +1,40 @@
+body{
+    background: none;
+}
+
+.body-content {
+    margin: auto;
+    height: 100%;
+    width: 400px;
+    margin-bottom: 80px;
+}
+
+#img-login {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+#title-welcome {
+    text-align: center;
+}
+
+#btn-login {
+    margin-top: 30px;
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+#btn-login:hover {
+    color: #fff;
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+#btn-sign-up {
+    margin: 18px;
+    color: #17a2b8;
+    text-align: center;
+}

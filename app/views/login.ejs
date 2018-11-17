@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Blockchain Visualizer</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/loginStyle.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/icon.png"/>
+</head>
+<body>
+
+<%- include partials/navbar.ejs %>
+
+<div class="body-content">
+    <div class="row">
+        <div class="col-sm">
+            <img src="/images/icon-white-bg.png" id="img-login" class="center">
+            <h3 id="title-welcome">Welcome!</h3>
+
+            <form class="needs-validation" noalidate action="/login" method="post">
+
+                <div class="mb-3">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        Valid username is required.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password">Password</label>
+                    <input type="text" class="form-control" id="password" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        Valid password is required.
+                    </div>
+                </div>
+
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    Incorrect user or password
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <button class="btn btn-primary btn-lg btn-block" id="btn-login" type="submit">Sign In</button>
+
+                <div id="btn-sign-up">
+                    <a href="#"> Sign Up </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<%- include partials/footer.ejs %>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+</body>
+</html>

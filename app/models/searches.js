@@ -20,6 +20,4 @@ const SearchesSchema = new mongoose.Schema({
     }]
 });
 
-const Searches = mongoose.model('Searches', SearchesSchema);
-
-module.exports = Searches;
+module.exports = mongoose.model('Searches', SearchesSchema);

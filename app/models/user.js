@@ -1,20 +1,14 @@
 const mongoose = require('mongoose');
 
-const user = new mongoose.Schema({
-    user_agent: {
+const User = new mongoose.Schema({
+    username: {
         type: String,
         require: true,
     },
-    plataform: {
-        type: String,
-        require: true,
-    },
-    plataform_details: {
+    password: {
         type: String,
         require: true,
     }
 });
 
-const User = mongoose.model('User', user);
-
-module.exports = User;
+module.exports = mongoose.model('User', User);
