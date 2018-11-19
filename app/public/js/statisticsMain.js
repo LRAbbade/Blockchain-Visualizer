@@ -2,12 +2,11 @@ var reqGraphs = document.querySelector('#reqTimeSeries');
 
 // TODO:
 // request number of requests over time from mongo and plot
-Plotly.plot(reqGraphs, [{
-        x: [1, 2, 3, 4, 5],
-        y: [1, 2, 4, 8, 16]
-    }], {
-    margin: { t: 0 }
-});
+$.get("http://localhost:5000/statisticsJson", (data, status) => {
+    Plotly.plot(reqGraphs, [data.numRequests], {
+        margin: { t: 0 }
+    });
+})
 
 // TODO:
 // Mongo aggregate group by platform and browser

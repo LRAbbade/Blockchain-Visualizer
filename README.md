@@ -1,7 +1,7 @@
 # Blockchain Visualizer
 A Blockchain visualizing web app.
 
-The goal of this project is to make a Blockchain visualization platform. It should display newly generated blocks in real time and allow users to search the Blockchain for a specific block, using its hash.
+The goal of this project is to make a Blockchain visualization platform. It should display newly blocks according to the user preferences.
 
 Searches made in the platform will be stored in a MongoDB for further analysis.
 

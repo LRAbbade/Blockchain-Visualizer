@@ -24,8 +24,8 @@ module.exports = function (application) {
         application.app.controllers.index.renderStatistics(application, req, res);
     });
 
-    application.get('/', function (req, res) {
-        res.send('Blockchain Visualizer');
+    application.get('/statisticsJson', (req, res) => {
+        application.app.controllers.index.getStatistics(application, req, res);
     });
 
     //Users route

@@ -1,17 +1,29 @@
 const mongoose = require('mongoose');
 
 const UserInfo = new mongoose.Schema({
-    user_agent: {
+    ip: {
         type: String,
-        require: true,
+        require: true
+    },
+    userAgent: {
+        type: String,
+        require: true
     },
     plataform: {
         type: String,
-        require: true,
+        require: true
     },
-    plataform_details: {
+    plataformDetails: {
         type: String,
-        require: true,
+        require: true
+    },
+    browser: {
+        type: String,
+        require: true
+    }, 
+    timestamp: {
+        type: Date,
+        require: true
     }
 });
 
