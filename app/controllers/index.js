@@ -27,7 +27,7 @@ function getReqDetails(req) {
 
 function insertStatisticsInMongo(reqDetails) {
     new UserInfo(reqDetails).save((err, userInfo) => {
-        console.log(`new userInfo created: ${JSON.stringify(userInfo)}`);
+        // console.log(`new userInfo created: ${JSON.stringify(userInfo)}`);        // for debugging
     });
 }
 
@@ -78,7 +78,7 @@ function formatAsTimeSeries(aggregationResult) {
     return { x, y };
 }
 
-module.exports.getStatistics = function (application, req, resp) {
+module.exports.getStatistics = function (application, req, response) {
     function getDateEdge(oldest, call) {
         UserInfo.aggregate([{
             $project: {
@@ -113,17 +113,36 @@ module.exports.getStatistics = function (application, req, resp) {
                     }
                 }
             }
-            ]).then(res => {
-                requests_ts = formatAsTimeSeries(res);
-                console.log(`requests_ts: ${requests_ts}`);
-                console.log(`requests_ts stringify: ${JSON.stringify(requests_ts)}`);
-
-                resp.send({
-                    numRequests: requests_ts,
-                    statistics: 0
+            ]).then(numRequestsRes => {
+                UserInfo.aggregate([ {
+                        $group: {
+                            _id: "$platform",
+                            count: { $sum: 1 }
+                        }
+                    }
+                ]).then(platformRes => {
+                    UserInfo.aggregate([{
+                        $group: {
+                            _id: "$browser",
+                            count: { $sum: 1 }
+                        }
+                    }
+                    ]).then(browserRes => {
+                        response.send({
+                            numRequests: formatAsTimeSeries(numRequestsRes),
+                            statistics: {
+                                platform: formatAsTimeSeries(platformRes),
+                                browser: formatAsTimeSeries(browserRes)
+                            }
+                        });
+                    }).catch(browserErr => {
+                        console.log(`browser group err: ${browserErr}`);
+                    });
+                }).catch(platformErr => {
+                    console.log(`platform group err: ${platformErr}`);
                 });
-            }).catch(err => {
-                console.log(`bucket aggregation err: ${err}`);
+            }).catch(numReqErr => {
+                console.log(`bucket aggregation err: ${numReqErr}`);
             });
         });
     });

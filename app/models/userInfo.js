@@ -9,11 +9,11 @@ const UserInfo = new mongoose.Schema({
         type: String,
         require: true
     },
-    plataform: {
+    platform: {
         type: String,
         require: true
     },
-    plataformDetails: {
+    platformDetails: {
         type: String,
         require: true
     },
