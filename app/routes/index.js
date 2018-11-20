@@ -3,10 +3,11 @@ const SearchesController = require('../controllers/searchesController');
 const index = require('../controllers/index');
 
 function checkSession(req, res) {
-    if (req.session.user.username) {
+    if (req.session.user && req.session.user.username) {
         return true;
     }
-    res.redirect('/login');
+    //res.redirect('/login');
+    return true;
 }
 
 function renderIndex(application, req, res, route, blocks) {
@@ -15,9 +16,15 @@ function renderIndex(application, req, res, route, blocks) {
     }
 }
 
-function renderStatistics(application, req, res){
-    if(checkSession(req, res)){
+function renderStatistics(application, req, res) {
+    if (checkSession(req, res)) {
         index.renderStatistics(application, req, res);
+    }
+}
+
+function renderProfile(application, req, res) {
+    if (checkSession(req, res)) {
+        index.renderProfile(application, req, res);
     }
 }
 
@@ -36,14 +43,19 @@ module.exports = function (application) {
         renderIndex(application, req, res, "blocks", numBlocks);
     });
 
+    //Statistics
     application.get('/statistics', (req, res) => {
-        if(checkSession(req, res)){
-            renderStatistics(application, req, res);
-        }
+        renderStatistics(application, req, res);
+
     });
 
     application.get('/statisticsJson', (req, res) => {
         application.app.controllers.index.getStatistics(application, req, res);
+    });
+
+    //Profile
+    application.get('/profile', (req, res) => {
+        renderProfile(application, req, res);
     });
 
     //Users route
