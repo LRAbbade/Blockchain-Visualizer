@@ -14,7 +14,24 @@
 <%- include partials/navbar.ejs %>
 
 <div class="container" style="background-image: none;">
-
+    <form action="/login" method="post">
+        <div class="row">
+            <label>E-mail:
+                <input name="email" type="email" value="<%= login.email %>" required>
+            </label>
+        </div>
+        <div class="row">
+            <label>Senha:
+                <input class="text-input-single-line" name="password" type="password" required>
+            </label>
+        </div>
+        <div class="row">
+            <button type="submit">Login</button>
+        </div>
+        <div class="row">
+            <p>Não tem uma conta? <a href="/register-user">cadastre-se</a></p>
+        </div>
+    </form>
 </div>
 
 <%- include partials/footer.ejs %>
