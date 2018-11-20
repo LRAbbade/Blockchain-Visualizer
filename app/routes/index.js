@@ -1,27 +1,45 @@
 const UserInfoController = require('../controllers/userInfoController');
 const SearchesController = require('../controllers/searchesController');
+const index = require('../controllers/index');
+
+function checkSession(req, res) {
+    if (req.session.user.username) {
+        return true;
+    }
+    res.redirect('/login');
+}
+
+function renderIndex(application, req, res, route, blocks) {
+    if (checkSession(req, res)) {
+        index.renderIndex(application, req, res, route, blocks);
+    }
+}
+
+function renderStatistics(application, req, res){
+    if(checkSession(req, res)){
+        index.renderStatistics(application, req, res);
+    }
+}
 
 module.exports = function (application) {
-    function renderIndex(req, res, route, blocks) {
-        application.app.controllers.index.renderIndex(application, req, res, route, blocks);
-    }
-
     application.get('/', (req, res) => {
-        renderIndex(req, res, "lastBlocks", "20");
+        renderIndex(application, req, res, "lastBlocks", "20");
     });
 
     application.get('/lastBlocks/:amount', (req, res) => {
         const numBlocks = req.params.amount;
-        renderIndex(req, res, "lastBlocks", numBlocks);
+        renderIndex(application, req, res, "lastBlocks", numBlocks);
     });
 
     application.get('/blocks/:amount', (req, res) => {
         const numBlocks = req.params.amount;
-        renderIndex(req, res, "blocks", numBlocks);
+        renderIndex(application, req, res, "blocks", numBlocks);
     });
 
     application.get('/statistics', (req, res) => {
-        application.app.controllers.index.renderStatistics(application, req, res);
+        if(checkSession(req, res)){
+            renderStatistics(application, req, res);
+        }
     });
 
     application.get('/statisticsJson', (req, res) => {

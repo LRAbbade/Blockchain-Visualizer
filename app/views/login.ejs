@@ -20,11 +20,11 @@
             <img src="/images/icon-white-bg.png" id="img-login" class="center">
             <h3 id="title-welcome">Welcome!</h3>
 
-            <form class="needs-validation" noalidate action="/login" method="post">
+            <form class="needs-validation" noalidate action="/auth" method="post">
 
                 <div class="mb-3">
                     <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" placeholder="" value="" required>
+                    <input type="text" class="form-control" id="username" placeholder="" value="" required name="username">
                     <div class="invalid-feedback">
                         Valid username is required.
                     </div>
@@ -32,18 +32,20 @@
 
                 <div class="mb-3">
                     <label for="password">Password</label>
-                    <input type="text" class="form-control" id="password" placeholder="" value="" required>
+                    <input type="text" class="form-control" id="password" placeholder="" value="" required name="password">
                     <div class="invalid-feedback">
                         Valid password is required.
                     </div>
                 </div>
 
+                <% if(status != 200){ %>
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                     Incorrect user or password
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <% } %>
 
                 <button class="btn btn-primary btn-lg btn-block" id="btn-login" type="submit">Sign In</button>
 
