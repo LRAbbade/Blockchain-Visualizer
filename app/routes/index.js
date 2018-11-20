@@ -3,7 +3,7 @@ const SearchesController = require('../controllers/searchesController');
 const index = require('../controllers/index');
 
 function checkSession(req, res) {
-    if (req.session.user.username) {
+    if (req.session.user && req.session.user.username) {
         return true;
     }
     res.redirect('/login');
