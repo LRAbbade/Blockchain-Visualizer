@@ -49,6 +49,10 @@ module.exports.renderStatistics = function (application, req, res) {
     res.render("statistics");
 };
 
+module.exports.renderProfile = function (application, req, res) {
+    res.render("profile");
+};
+
 function getDateRange(start, finish) {
     var r = [];
     var aux = start;
@@ -75,7 +79,7 @@ function formatAsTimeSeries(aggregationResult) {
         y.push(document['count']);
     });
 
-    return { x, y };
+    return {x, y};
 }
 
 module.exports.getStatistics = function (application, req, response) {
@@ -109,22 +113,22 @@ module.exports.getStatistics = function (application, req, response) {
                     boundaries: getDateRange(oldestDay, newestDay),
                     default: "Other",
                     output: {
-                        "count": { $sum: 1 }
+                        "count": {$sum: 1}
                     }
                 }
             }
             ]).then(numRequestsRes => {
-                UserInfo.aggregate([ {
-                        $group: {
-                            _id: "$platform",
-                            count: { $sum: 1 }
-                        }
+                UserInfo.aggregate([{
+                    $group: {
+                        _id: "$platform",
+                        count: {$sum: 1}
                     }
+                }
                 ]).then(platformRes => {
                     UserInfo.aggregate([{
                         $group: {
                             _id: "$browser",
-                            count: { $sum: 1 }
+                            count: {$sum: 1}
                         }
                     }
                     ]).then(browserRes => {
