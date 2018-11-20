@@ -1,13 +1,11 @@
-const UserInfoController = require('../controllers/userInfoController');
-const SearchesController = require('../controllers/searchesController');
 const index = require('../controllers/index');
 
 function checkSession(req, res) {
     if (req.session.user && req.session.user.username) {
         return true;
     }
-    //res.redirect('/login');
-    return true;
+    res.redirect('/login');
+    // return true;
 }
 
 function renderIndex(application, req, res, route, blocks) {
@@ -67,7 +65,6 @@ module.exports = function (application) {
     });
 
     application.post('/register-user', function (req, res) {
-
         UserInfoController.insert(req.body, function (resp) {
             res.json(resp);
         })
