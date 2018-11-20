@@ -1,6 +1,27 @@
 const User = require('../models/user');
 const bcrypt = require('bcrypt-nodejs');
 
+exports.login = function (req, callback) {
+    User.findOne({username: req.body.username}, function (error, user) {
+        if (error) {
+            callback({status: 500, auth: false, error: "An error occurred."});
+        } else if (!user) {
+            callback({status: 500, auth: false, error: "Incorrect username or password."});
+        } else {
+            bcrypt.compare(req.body.password, user.password, function (err, res) {
+                if (!res) {
+                    callback({status: 500, auth: false, error: "Incorrect username or password."});
+                } else {
+                    req.session.user = {
+                        username: user.username,
+                    };
+                    callback({status: 200, auth: true});
+                }
+            });
+        }
+    });
+};
+
 exports.insert = function (body, callback) {
     const username = body.username;
     const password = body.password;
