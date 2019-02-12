@@ -16,3 +16,7 @@ Database is [MongoDB](https://www.mongodb.com/).
 ---
 
 For further documentation, [see the docs](https://github.com/LRAbbade/Blockchain-Visualizer/tree/master/docs).
+
+---
+
+This repository is part of the [CarChain Project](https://github.com/LRAbbade/PBFT).
